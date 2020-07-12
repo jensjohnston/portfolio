@@ -1,0 +1,106 @@
+@font-face {
+font-family: "Raisonne Demibold";
+src: url("assets/fonts/Raisonne Demibold.ttf") format('truetype');
+font-weight: normal;
+}
+
+@font-face {
+    font-family: "UniversalSans";
+    src: url("assets/fonts/UniversalSans.ttf") format('truetype');
+    font-weight: normal;
+    }
+
+    @font-face {
+        font-family: Bandeins;
+        src: url(/assets/fonts/bandeinsstrangevariablegx.ttf);
+    }
+
+
+    @font-face {
+        font-family: Bandeinssans;
+        src: url(/assets/fonts/BandeinsSansVariableGX.ttf);
+        font-weight: normal;
+    }
+    
+
+    @font-face {
+        font-family: Bandeinssans;
+        src: url(/assets/fonts/BandeinsSansVariableGX.ttf);
+        font-weight: 700;
+    }
+
+    @keyframes animate-type {
+        0% { 
+            font-variation-settings: "wght" 400, "wdth" 0, "slnt" 0;
+          letter-spacing: 0em;
+        }
+        100% {
+          font-variation-settings: "wght" 900, "wdth" 900, "slnt" -10;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .header-type{
+        font-variation-settings: "wght" 400;
+        animation: animate-type 3s infinite alternate;
+      }
+
+
+    h1 {
+        font-family: "Bandeins";
+    }
+
+    .bold-font{
+      font-weight: 900;
+    }
+
+    h2{
+        font-family: "Bandeins";
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 30em) {
+
+      div.wiper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--apostrophegold);
+        z-index: 2;
+        transform: translate(-100%, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .wiper div {
+        height: 90px;
+        overflow: hidden;
+        position: relative;
+      }
+      
+
+
+      .wiper h2 {
+        display:none;
+      }
+    }
+
+    .bandeinssans{
+      font-family: Bandeinssans;
+    }
+
+     a{
+        font-family: "Bandeins";
+        line-height: 110%;
+    }
+
+    p {
+        font-family: 'Bandeins', sans-serif;
+    }
+
+
+
+   

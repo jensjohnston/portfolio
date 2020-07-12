@@ -1,0 +1,17 @@
+
+.arrow-down {
+  background-image: url(/assets/arrow-down.svg);
+}
+
+.arrow-down-position {
+  position: absolute;
+  left: 50%;
+  bottom: 4vh;
+  width: 64px;
+  height: 32px;
+  background-image: url(/assets/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,286 @@
+:root {
+  --latchblue: #dadce7;
+  --apostrophegold: #b6a066;
+  --almostblack: #2F2F2F;
+  --acnegrey: #EEEEEE;
+  --darkblue: #1C1E27;
+}
+
+
+@font-face {
+  font-family: Bandeinssans;
+  src: url(/assets/fonts/BandeinsSansVariableGX.ttf);
+  font-weight: normal;
+}
+
+
+
+
+
+
+nav {
+  display: flex;
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+    width: 100%;
+  border-top: 2px solid var(--apostrophegold);
+  padding: 20px;
+  background-color: var(--darkblue);
+  z-index: 1000;
+  transition: ease-in-out 0.5s;
+}
+
+.open {
+  bottom: 0;
+}
+
+.nav-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 5000;
+  padding: 20px;
+}
+
+.nav-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  padding: 20px;
+  z-index: 60;
+  cursor: pointer;
+  transition: 0.5s;
+
+  margin: 0 auto 0 auto;
+  border: none;
+  background: none;
+  width: 50px;
+  height: 50px;
+  display: block;
+  color: var(--apostrophegold);
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+  0 2px 4px rgba(0,0,0,0.07), 
+  0 4px 8px rgba(0,0,0,0.07), 
+  0 8px 16px rgba(0,0,0,0.07),
+  0 16px 32px rgba(0,0,0,0.07), 
+  0 32px 64px rgba(0,0,0,0.07);
+}
+
+.nav-toggle::after,
+.nav-toggle::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.nav-toggle::before {
+  -webkit-transform: translate(0, 1px) rotate(90deg);
+  transform: translate(0, 1px) rotate(90deg);
+  opacity: 1;
+  transition: all 200ms ease-out;
+}
+
+.nav-toggle::after {
+  -webkit-transform: translate(0, -1px) rotate(0deg);
+  transform: translate(0, -1px) rotate(0deg);
+}
+
+.nav-toggle.is-active::before {
+  -webkit-transform: translate(0, 1px) rotate(0);
+  transform: translate(0, 1px) rotate(0);
+  opacity: 0;
+}
+
+.info {
+  
+  position: relative;
+  width: 100%;
+
+}
+
+.info a {
+  color: #ffffff;
+}
+
+.info p {
+  font-size: 2rem;
+  text-transform: none;
+  max-width: 600px;
+  float: left;
+  color: #fff;
+}
+
+.links {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  padding-bottom: 16px;
+}
+
+.info .links a {
+  font-family: Bandeinssans;
+  margin-right: 30px;
+  color: var(--apostrophegold);
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.info .links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 479px) {
+  
+  .links {
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .info .links a {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: var(--apostrophegold);
+    text-decoration: none;
+    display: block;
+    font-family: Bandeinssans;
+  }
+  
+  .links-contact {
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .info .links-contact a {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+
+@media (max-width: 320px) {
+  
+  div.loading img {
+    width: 250px;
+  }
+  
+    nav {
+    height: 80%;
+    bottom: -80%;
+    transition: ease-in-out 0.5s;
+  }  
+}
+
+
+
+@media (max-width: 640px) {
+  
+  div.loading img {
+    width: 290px;
+  }
+
+  nav {
+    height: 75%;
+    bottom: -75%;
+    transition: ease-in-out 0.5s;
+  }
+
+  .info p {
+    font-size: 13px;
+    line-height: 1.4;
+    text-transform: none;
+    width: 100%;
+    float: left;
+    padding-bottom: 50px;
+  }
+
+
+  .ctas {
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .ctas a {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-family: bandeinssans;
+  }
+
+  body.profile h3 {
+    font-size: 26px;
+  }
+
+  .card {
+    width: 80vmin;
+  }
+}
+
+	@keyframes animate {
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+  @media (max-width: 767px) {
+  
+    .nav-toggle::after,
+    .nav-toggle::before {
+    height: 2px;
+  }
+  }
+  
+  
+  @media (max-width: 667px) {
+    
+      nav {
+      height: 40%;
+      bottom: -40%;
+      transition: ease-in-out 0.5s;
+    }
+  }
+  
+  .info h2{
+    color: #fff;
+  }
+
+
+
+
+
+
+  /*LOGO-JENS*/
+
+  .logo{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    color: var(--apostrophegold);
+    z-index:100;
+  }

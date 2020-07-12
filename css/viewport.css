@@ -1,0 +1,29 @@
+
+/*We arerunning our viewport transitions only on wider screens*/
+
+
+@media (min-width: 640px) {
+
+    .fade {
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+    
+    .in-viewport .fade {
+      opacity: 1;
+    }
+
+   
+    .in-viewport .line1,
+    .in-viewport .line2,
+    .in-viewport .line3{
+      width: 50px;
+      height: 5px;
+      background-color: #2f2f2f;
+    }
+
+  
+    
+
+   
+}
